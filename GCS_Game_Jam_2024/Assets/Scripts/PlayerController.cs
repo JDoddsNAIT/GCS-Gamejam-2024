@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public string inputAxisX;
-    public string jumpButton;
     public float speed;
+    public string jumpButton;
+    public float jumpForce;
+
+    public string sizeInput;
+    public float sizeChangeSpeed;
 
     private Rigidbody2D body;
     // Start is called before the first frame update
@@ -22,16 +26,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 direction = new(Input.GetAxis(inputAxisX), 0);
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(speed * Time.deltaTime * direction);
 
-        
+        ChangeSize(Input.GetAxis(sizeInput) * sizeChangeSpeed * Time.deltaTime);
     }
 
     private void FixedUpdate()
     {
         if (Input.GetButtonDown(jumpButton))
         {
-            body.AddForce(transform.up);
+            body.AddForce(transform.up * jumpForce);
         }
+    }
+
+    public void ChangeSize(float amount)
+    {
+        transform.localScale += new Vector3(amount, amount);
     }
 }
