@@ -64,4 +64,15 @@ public class FollowObject : MonoBehaviour
         }
         return returnPosition / positions.Count;
     }
+
+    public void RemoveTransform(Transform transform)
+    {
+        transforms.Remove(transform);
+        Debug.Log($"Transform \"{transform}\" has been removed.");
+    }
+    public void AddTransform(Transform transform)
+    {
+        transforms.Add(transform);
+        Debug.Log($"Transform \"{transform}\" has been added.");
+    }
 }
