@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1144523596}
   - component: {fileID: 1144523595}
   - component: {fileID: 1144523594}
+  - component: {fileID: 1144523597}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -215,6 +216,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144523597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144523593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003d49c0c066ec949a884bca363e19ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTransform: {fileID: 2072974786}
+  targetOffset: {x: 0, y: 0, z: 10}
+  deadZoneRadius: 2
+  followSpeed: 5
 --- !u!1 &2072974783
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa5a1de43ce66d47a3ec27a4821debd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputAxisX: 
+  inputAxisX: Horizontal
   jumpButton: 
   speed: 0
 --- !u!212 &2072974785
