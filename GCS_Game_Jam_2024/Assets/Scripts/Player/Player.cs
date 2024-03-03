@@ -6,26 +6,62 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     private GManager GameManager;
-    private string name = "";
+    private string _name = "";
+    [SerializeField] private PlayerMovement _movementSystem;
+    private ParticleSystem _deathParticles;
+    [SerializeField] private GameObject _controller;
+    private bool _isDead = false;
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
     void Start()
     {
+        Debug.Log("New Player Joined");
         GameManager = GameObject.Find("GameManager").transform.GetComponent<GManager>();
         if (GameManager == null) { Debug.LogError("Game Manager is NULL!");  }
+
+        if (_movementSystem == null) { Debug.LogError("Movement Component is NULL!"); }
+
+        _deathParticles = transform.GetComponentInChildren<ParticleSystem>();
+        if (_deathParticles == null) { Debug.LogError("Particle System in NULL!");}
 
         GameManager.PlayerJoined(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (!_isDead && _controller.transform.position.y <= -5) { KillPlayer();  }
+    }
+
+    public void ResetPlayer(Vector3 resetPosition)
+    {
+        // Reset position and velocity
+        transform.position = resetPosition;
+        _movementSystem.ResetMovement();
+        _controller.SetActive(true);
+    }
+
+    public void KillPlayer()
+    {
+        _isDead = true;
+        _deathParticles.transform.position = _controller.transform.position;
+        _deathParticles.Play();
+        _controller.SetActive(false);
     }
 
     public void SetName(string newName)
     {
-        name = newName;
+        _name = newName;
     }
     public string GetPlayerName()
     {
-        return name;
+        return _name;
     }
+
+    public bool IsDead() { return _isDead; }
+    public float GetControllerPosX() { return _controller.transform.position.x; }
 }

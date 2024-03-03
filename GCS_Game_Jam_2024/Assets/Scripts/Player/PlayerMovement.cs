@@ -15,15 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private bool _hasDoubleJump = false;
     private bool _jump = false;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
-    private void Start()
-    {
-        Debug.Log("New Player Joined");
-    }
     void Update()
     {
         _movement.x = _playerInput.actions["Movement"].ReadValue<Vector2>().x;
@@ -35,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _rigidbody.velocity = new Vector2(_movement.x * _moveSpeedX, _rigidbody.velocity.y);
+    }
+
+    public void ResetMovement()
+    {
+        _movement = Vector2.zero;
+        _rigidbody.velocity = Vector2.zero;
     }
 
     public void HitJumpPad()

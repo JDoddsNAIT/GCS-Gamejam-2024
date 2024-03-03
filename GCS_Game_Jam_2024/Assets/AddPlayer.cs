@@ -33,7 +33,7 @@ public class AddPlayer : MonoBehaviour
         {
             PlayerCount -= 1;
             PlayerArray[PlayerCount].SetActive(true);
-            if(PlayerCount == 1)
+            if(PlayerCount == 0)
             {
                 PlayerArray[4].SetActive(true);
             }

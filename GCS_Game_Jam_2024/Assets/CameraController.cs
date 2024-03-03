@@ -13,10 +13,12 @@ public class FollowObject : MonoBehaviour
     public bool2 useAxis;
 
     public bool drawGizmos = true;
+    private Vector3 _startPosition = Vector3.zero;
 
     private void Start()
     {
         FindPlayers();
+        _startPosition = this.transform.position;
     }
 
     void Update()
@@ -82,6 +84,11 @@ public class FollowObject : MonoBehaviour
     {
         transforms.Remove(transform);
         Debug.Log($"Transform \"{transform}\" has been removed.");
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = _startPosition;
     }
 
     public void FindPlayers()

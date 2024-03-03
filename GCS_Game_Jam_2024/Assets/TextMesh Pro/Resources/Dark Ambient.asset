@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d21f6ece3b46479f0c328f8c6007e0, type: 3}
   m_Name: Dark Ambient
   m_EditorClassIdentifier: 
-  colorMode: 3
-  topLeft: {r: 0.57276607, g: 0.58362025, b: 0.5849056, a: 1}
-  topRight: {r: 0.4716981, g: 0.4654681, b: 0.4654681, a: 1}
-  bottomLeft: {r: 0.56078434, g: 0.5254902, b: 0.5254902, a: 1}
-  bottomRight: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  colorMode: 1
+  topLeft: {r: 1, g: 1, b: 1, a: 1}
+  topRight: {r: 0.35268334, g: 0.56772596, b: 0.5707547, a: 1}
+  bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+  bottomRight: {r: 0.35268334, g: 0.56772596, b: 0.5707547, a: 1}
