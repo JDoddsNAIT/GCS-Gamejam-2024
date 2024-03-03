@@ -498,7 +498,7 @@ Transform:
   m_GameObject: {fileID: 242842128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 92.27, y: 18.46, z: 1.5356352}
+  m_LocalPosition: {x: 542, y: -158, z: 1.5356352}
   m_LocalScale: {x: 8.338135, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1071,7 +1071,7 @@ Transform:
   m_GameObject: {fileID: 543610305}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.2, y: 23.05, z: 1.5356352}
+  m_LocalPosition: {x: 551.93, y: -153.40999, z: 1.5356352}
   m_LocalScale: {x: 20.84586, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1626,15 +1626,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4454664847289918695, guid: 2d64e15115782b446adcd4d8e3360c7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4454664847289918695, guid: 2d64e15115782b446adcd4d8e3360c7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4454664847289918695, guid: 2d64e15115782b446adcd4d8e3360c7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.044839077
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4454664847289918695, guid: 2d64e15115782b446adcd4d8e3360c7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2036,7 +2036,7 @@ Transform:
   m_GameObject: {fileID: 1272039180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -415, y: 184, z: -10}
+  m_LocalPosition: {x: -32, y: 56, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2477,7 +2477,7 @@ Transform:
   m_GameObject: {fileID: 1555574456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.2, y: 13.8, z: 1.5356352}
+  m_LocalPosition: {x: 551.93, y: -162.65999, z: 1.5356352}
   m_LocalScale: {x: 20.84586, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3328,7 +3328,7 @@ Transform:
   m_GameObject: {fileID: 1905318602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 112.13, y: 18.18, z: 1.5356352}
+  m_LocalPosition: {x: 561.86, y: -158.28, z: 1.5356352}
   m_LocalScale: {x: 8.734268, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3655,7 +3655,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Artists:
 
-    - Jiritori
+    - Geleena
 
     - Cheryl'
   m_isRightToLeft: 0

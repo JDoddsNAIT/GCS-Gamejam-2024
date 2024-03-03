@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     private GManager GameManager;
+    private string name = "";
     void Start()
     {
         GameManager = GameObject.Find("GameManager").transform.GetComponent<GManager>();
@@ -17,6 +18,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public void SetName(string newName)
+    {
+        name = newName;
+    }
+    public string GetPlayerName()
+    {
+        return name;
     }
 }

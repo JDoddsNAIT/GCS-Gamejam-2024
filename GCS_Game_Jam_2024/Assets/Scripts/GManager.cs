@@ -13,7 +13,6 @@ public class GManager : MonoBehaviour
     private int playerCount = 0;
 
     public event Action PlayerJoin;
-
     
     private void Awake()
     {
@@ -36,7 +35,7 @@ public class GManager : MonoBehaviour
     public void PlayerJoined(Player newPlayer)
     {
         players[playerCount++] = newPlayer;
-        newPlayer.gameObject.transform.position = new Vector3(-550, 160, 0);
+        newPlayer.SetName("Player " + playerCount);
         PlayerJoin();
     }
 

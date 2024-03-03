@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 2026345002740936982}
   _rigidbody: {fileID: 8732814204173351252}
-  _moveSpeedX: 10
+  _moveSpeedX: 5
 --- !u!114 &2026345002740936982
 MonoBehaviour:
   m_ObjectHideFlags: 0
