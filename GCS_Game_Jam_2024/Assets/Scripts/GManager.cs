@@ -77,7 +77,7 @@ public class GManager : MonoBehaviour
     {
         if (playerCount >= 1)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 
