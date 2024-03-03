@@ -14,6 +14,11 @@ public class FollowObject : MonoBehaviour
 
     public bool drawGizmos = true;
 
+    private void Start()
+    {
+        FindPlayers();
+    }
+
     void Update()
     {
         Vector3 followPosition;
