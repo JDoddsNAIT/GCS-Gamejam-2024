@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4344157322043558322
 Transform:
   m_ObjectHideFlags: 0
@@ -10132,10 +10132,10 @@ MonoBehaviour:
   _moveSpeedX: 5
   _jumpStrength: 15
   _animator:
-  - {fileID: 9188788221989468271}
-  - {fileID: 3565630588065724941}
   - {fileID: 25340419471593005}
   - {fileID: 7200300677858241441}
+  - {fileID: 9188788221989468271}
+  - {fileID: 3565630588065724941}
   _castDistance: 0.55
   _castRadius: 0.2
   _groundLayer:

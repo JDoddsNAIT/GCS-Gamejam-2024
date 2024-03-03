@@ -90,7 +90,7 @@ public class GManager : MonoBehaviour
     {
         players[playerCount++] = newPlayer;
         newPlayer.SetName("Player " + playerCount);
-        newPlayer.SetID(playerCount + 1);
+        newPlayer.SetID(playerCount - 1);
         PlayerJoin();
     }
 
