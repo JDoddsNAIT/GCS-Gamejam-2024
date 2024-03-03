@@ -10,7 +10,7 @@ public class FollowObject : MonoBehaviour
     public float deadZoneRadius;
     public float followSpeed;
 
-    public bool2 useAxes;
+    public bool2 useAxis;
 
     void Update()
     {
@@ -25,9 +25,9 @@ public class FollowObject : MonoBehaviour
         {
             Vector2 translation;
 
-            translation.x = useAxes.x ? 
-                followSpeed * targetDistance * Time.deltaTime * targetDirection.x : 0;
-            translation.y = useAxes.y ?
+            translation.x = useAxis.x ?
+                followSpeed * targetDistance * Time.deltaTime * targetDirection.x : followSpeed * Time.deltaTime;
+            translation.y = useAxis.y ?
                 followSpeed * targetDistance * Time.deltaTime * targetDirection.y : 0;
 
             transform.Translate(translation);
@@ -43,9 +43,9 @@ public class FollowObject : MonoBehaviour
         Vector3 gizmoPosition = targetPosition + targetDirection * deadZoneRadius;
         float targetDistance = Vector3.Distance(followPosition, targetPosition) - deadZoneRadius;
 
-        Gizmos.color = targetDistance > 0 ? 
+        Gizmos.color = targetDistance > 0 ?
             Color.green : Color.red;
-        
+
         foreach (var transform in transforms)
         {
             Gizmos.DrawLine(transform.position, followPosition);
@@ -64,15 +64,14 @@ public class FollowObject : MonoBehaviour
         }
         return returnPosition / positions.Count;
     }
-
-    public void RemoveTransform(Transform transform)
-    {
-        transforms.Remove(transform);
-        Debug.Log($"Transform \"{transform}\" has been removed.");
-    }
     public void AddTransform(Transform transform)
     {
         transforms.Add(transform);
         Debug.Log($"Transform \"{transform}\" has been added.");
+    }
+    public void RemoveTransform(Transform transform)
+    {
+        transforms.Remove(transform);
+        Debug.Log($"Transform \"{transform}\" has been removed.");
     }
 }
