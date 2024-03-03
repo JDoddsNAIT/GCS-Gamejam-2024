@@ -19,7 +19,7 @@ public class FallingAcid : MonoBehaviour
         //src.Play();
         if (other.transform.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Yellow");
+            other.transform.GetComponentInParent<Player>().KillPlayer();
         }
         transform.position = target.position;
         RB2D.velocity = Vector2.zero;

@@ -19,11 +19,12 @@ public class GManager : MonoBehaviour
     private FollowObject _cameraController;
     private bool _gameStarted = false;
     [SerializeField] private GameObject _gameOverUI;
-    
+    [SerializeField] private GameObject _gameWinUI;
+    public float camerafastness = 0.0f;
+
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
-
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -42,6 +43,11 @@ public class GManager : MonoBehaviour
     {
         if (_gameStarted)
         {
+            _cameraController.CameraFreeze(camerafastness);
+            if (camerafastness < 4)
+            {
+                camerafastness += 0.001f;
+            }
             for (int i = 0; i < playerCount; i++)
             {
                 if (!players[i].IsDead() &&
@@ -60,16 +66,26 @@ public class GManager : MonoBehaviour
                 }
             }
 
+
             if (!playerAlive)
             {
-                _cameraController.CameraFreeze();
+                _cameraController.CameraFreeze(0);
                 StartCoroutine(ResetGame());
                 _gameOverUI.SetActive(true);
+                camerafastness = 0;
                 _gameStarted = false;
             }
         }
     }
 
+    public void wingame()
+    {
+        _cameraController.CameraFreeze(0);
+        StartCoroutine(ResetGame());
+        _gameWinUI.SetActive(true);
+        camerafastness = 0;
+        _gameStarted = false;
+    }
     public void PlayerJoined(Player newPlayer)
     {
         players[playerCount++] = newPlayer;

@@ -9,6 +9,7 @@ public class FollowObject : MonoBehaviour
     public Vector3 targetOffset;
     public float deadZoneRadius;
     public float followSpeed;
+    public float numspeed;
 
     public bool2 useAxis;
 
@@ -91,10 +92,11 @@ public class FollowObject : MonoBehaviour
         transform.position = _startPosition;
     }
 
-    public void CameraFreeze()
+    public void CameraFreeze(float numspeed)
     {
-        followSpeed = 0;
+        followSpeed = numspeed;
     }
+
 
     public void FindPlayers()
     {
