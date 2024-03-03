@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private GManager GameManager;
     private string _name = "";
+    private int _playerID = 0;
     [SerializeField] private PlayerMovement _movementSystem;
     private ParticleSystem _deathParticles;
     [SerializeField] private GameObject _controller;
@@ -57,6 +58,13 @@ public class Player : MonoBehaviour
     {
         _name = newName;
     }
+
+    public void SetID(int newID)
+    {
+        _playerID = newID;
+        _movementSystem.SetID(_playerID);
+    }
+
     public string GetPlayerName()
     {
         return _name;
