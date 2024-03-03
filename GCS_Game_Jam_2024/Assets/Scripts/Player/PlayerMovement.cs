@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
@@ -12,15 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeedX = 10.0f;
     private bool _jump = false;
 
-
-    public void OnMove(InputAction.CallbackContext context)
+    private void Awake()
     {
-        
-    }
-
-    public void OnJump(InputAction.CallbackContext context)
-    {
-
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
@@ -32,7 +27,19 @@ public class PlayerMovement : MonoBehaviour
         _movement.x = _playerInput.actions["Movement"].ReadValue<Vector2>().x * _moveSpeedX;
         _jump = _playerInput.actions["Jump"].WasPressedThisFrame();
 
-        _movement.y = _rigidbody.velocity.y;
-        _rigidbody.velocity = _movement;
+        if (_jump)
+        {
+            _rigidbody.velocity = new Vector2(_movement.x, 10);
+        }
+
+        _rigidbody.velocity = new Vector2(_movement.x, _rigidbody.velocity.y);
+    }
+
+    public void HitJumpPad()
+    {
+        Debug.Log("Jump Pad Force Applied!");
+        {
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 10);
+        }
     }
 }
