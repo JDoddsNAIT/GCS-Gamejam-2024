@@ -914,7 +914,7 @@ Transform:
   m_GameObject: {fileID: 1144523593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 17, z: -10}
+  m_LocalPosition: {x: -3, y: -6, z: -10}
   m_LocalScale: {x: 2.479, y: 4.2143, z: 2.479}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -941,9 +941,10 @@ MonoBehaviour:
   targetOffset: {x: 0, y: 0, z: 10}
   deadZoneRadius: 1
   followSpeed: 5
-  useAxes:
-    x: 0
+  useAxis:
+    x: 1
     y: 1
+  drawGizmos: 1
 --- !u!1 &1158451840
 GameObject:
   m_ObjectHideFlags: 0
