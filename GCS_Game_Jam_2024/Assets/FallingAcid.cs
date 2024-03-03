@@ -9,6 +9,7 @@ public class FallingAcid : MonoBehaviour
     private BoxCollider2D TdBox2D;
     public Transform target;
     public Rigidbody2D RB2D;
+    [SerializeField] private GameObject _explodeEffectPrefab;
     //public AudioSource src;
     //public AudioClip sfx1;
 
@@ -21,6 +22,7 @@ public class FallingAcid : MonoBehaviour
         {
             other.transform.GetComponentInParent<Player>().KillPlayer();
         }
+        Instantiate(_explodeEffectPrefab, transform.position, Quaternion.identity);
         transform.position = target.position;
         RB2D.velocity = Vector2.zero;
     }
