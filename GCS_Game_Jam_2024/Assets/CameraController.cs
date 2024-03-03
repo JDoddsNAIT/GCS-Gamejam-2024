@@ -12,6 +12,8 @@ public class FollowObject : MonoBehaviour
 
     public bool2 useAxis;
 
+    public bool drawGizmos = true;
+
     void Update()
     {
         Vector3 followPosition;
@@ -36,25 +38,27 @@ public class FollowObject : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Vector3 followPosition = AveragePositions(transforms);
-
-        Vector3 targetPosition = transform.position + targetOffset;
-        Vector3 targetDirection = Vector3.Normalize(followPosition - targetPosition);
-        Vector3 gizmoPosition = targetPosition + targetDirection * deadZoneRadius;
-        float targetDistance = Vector3.Distance(followPosition, targetPosition) - deadZoneRadius;
-
-        Gizmos.color = targetDistance > 0 ?
-            Color.green : Color.red;
-
-        foreach (var transform in transforms)
+        if (drawGizmos)
         {
-            Gizmos.DrawLine(transform.position, followPosition);
+            Vector3 followPosition = AveragePositions(transforms);
+
+            Vector3 targetPosition = transform.position + targetOffset;
+            Vector3 targetDirection = Vector3.Normalize(followPosition - targetPosition);
+            Vector3 gizmoPosition = targetPosition + targetDirection * deadZoneRadius;
+            float targetDistance = Vector3.Distance(followPosition, targetPosition) - deadZoneRadius;
+
+            Gizmos.color = targetDistance > 0 ?
+                Color.green : Color.red;
+
+            foreach (var transform in transforms)
+            {
+                Gizmos.DrawLine(transform.position, followPosition);
+            }
+
+            Gizmos.DrawLine(gizmoPosition, followPosition);
+            Gizmos.DrawWireSphere(targetPosition, deadZoneRadius);
         }
-
-        Gizmos.DrawLine(gizmoPosition, followPosition);
-        Gizmos.DrawWireSphere(targetPosition, deadZoneRadius);
     }
-
     public Vector3 AveragePositions(List<Transform> positions)
     {
         Vector3 returnPosition = Vector3.zero;
