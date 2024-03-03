@@ -78,4 +78,12 @@ public class FollowObject : MonoBehaviour
         transforms.Remove(transform);
         Debug.Log($"Transform \"{transform}\" has been removed.");
     }
+
+    public void FindPlayers()
+    {
+        foreach (var gameObject in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            transforms.Add(gameObject.transform);
+        }
+    }
 }
