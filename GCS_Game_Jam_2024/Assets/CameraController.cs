@@ -91,6 +91,11 @@ public class FollowObject : MonoBehaviour
         transform.position = _startPosition;
     }
 
+    public void CameraFreeze()
+    {
+        followSpeed = 0;
+    }
+
     public void FindPlayers()
     {
         foreach (var gameObject in GameObject.FindGameObjectsWithTag("Player"))

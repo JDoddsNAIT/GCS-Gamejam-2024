@@ -12,12 +12,13 @@ public class GManager : MonoBehaviour
     [SerializeField] private Player[] players;
     [SerializeField] private Transform[] alivePlayers;
     private int playerCount = 0;
-    private WaitForSeconds _gameResetDelay = new WaitForSeconds(5);
+    private WaitForSeconds _gameResetDelay = new WaitForSeconds(3);
     public event Action PlayerJoin;
 
     private Vector3[] _playerSpawnPositions = new Vector3[4];
     private FollowObject _cameraController;
     private bool _gameStarted = false;
+    [SerializeField] private GameObject _gameOverUI;
     
     private void Awake()
     {
@@ -50,18 +51,21 @@ public class GManager : MonoBehaviour
                 }
             }
 
-            int deadPlayerCount = 0;
+            bool playerAlive = false;
             for (int i = 0; i < playerCount; i++)
             {
-                if (players[i].IsDead())
+                if (!players[i].IsDead())
                 {
-                    deadPlayerCount++;
+                    playerAlive = true;
                 }
             }
 
-            if (deadPlayerCount == playerCount)
+            if (!playerAlive)
             {
+                _cameraController.CameraFreeze();
                 StartCoroutine(ResetGame());
+                _gameOverUI.SetActive(true);
+                _gameStarted = false;
             }
         }
     }
@@ -95,12 +99,13 @@ public class GManager : MonoBehaviour
 
     public void RestartGame()
     {
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 0; i < playerCount; i++)
         {
-            players[i].ResetPlayer(_playerSpawnPositions[i]);
+            players[i].ResetPlayer(_playerSpawnPositions[i]);   
         }
 
         _cameraController.ResetPosition();
+        _gameStarted = true;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -129,7 +134,7 @@ public class GManager : MonoBehaviour
     IEnumerator ResetGame()
     {
         yield return _gameResetDelay;
-        ResetGame();
+        RestartGame();
     }
 
 }

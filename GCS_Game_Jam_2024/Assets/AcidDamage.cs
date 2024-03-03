@@ -10,7 +10,7 @@ public class AcidDamage : MonoBehaviour
     {
         if (other.transform.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.transform.GetComponentInParent<Player>().KillPlayer();
         }
     }
 }

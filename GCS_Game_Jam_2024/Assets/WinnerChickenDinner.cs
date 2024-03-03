@@ -18,9 +18,8 @@ public class WinnerChickenDinner : MonoBehaviour
         {
             _title.gameObject.SetActive(true);
             _title.text = "Winner is " + other.gameObject.transform.GetComponent<Player>().GetPlayerName();
-            Time.timeScale = 0;
-            GameManager = GameObject.Find("GameManager").transform.GetComponent<GManager>();
-            if (GameManager == null) { Debug.LogError("Game Manager is NULL!"); }
+            //GameManager = GameObject.Find("GameManager").transform.GetComponent<GManager>();
+            //if (GameManager == null) { Debug.LogError("Game Manager is NULL!"); }
 
         }
     }

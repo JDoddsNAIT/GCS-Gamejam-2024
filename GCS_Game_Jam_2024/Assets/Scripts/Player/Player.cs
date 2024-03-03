@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private ParticleSystem _deathParticles;
     [SerializeField] private GameObject _controller;
     private bool _isDead = false;
+    [SerializeField] private Color[] _deathEffectColors = new Color[4];
 
 
     private void Awake()
@@ -41,9 +42,9 @@ public class Player : MonoBehaviour
     public void ResetPlayer(Vector3 resetPosition)
     {
         // Reset position and velocity
-        transform.position = resetPosition;
-        _movementSystem.ResetMovement();
+        _movementSystem.ResetMovement(resetPosition);
         _controller.SetActive(true);
+        _isDead = false;
     }
 
     public void KillPlayer()

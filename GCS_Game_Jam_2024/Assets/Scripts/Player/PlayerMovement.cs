@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _castDistance;
     [SerializeField] private float _castRadius;
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private ParticleSystem _dustEffects;
     private int _playerIndex = 0;
 
     void Update()
@@ -26,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
         _movement.x = _playerInput.actions["Movement"].ReadValue<Vector2>().x;
         _jump = _playerInput.actions["Jump"].WasPressedThisFrame();
         _isGrounded = CheckGrounded();
+
+        if (_isGrounded)
+        {
+            _dustEffects.Play();
+            
+        }
+        else
+        {
+            _dustEffects.Stop();
+        }
 
         if (_jump && _isGrounded)
         {
@@ -44,8 +55,9 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.CircleCast(transform.position, _castRadius, -transform.up, _castDistance, _groundLayer);
     }
 
-    public void ResetMovement()
+    public void ResetMovement(Vector3 pos)
     {
+        transform.position = pos;
         _movement = Vector2.zero;
         _rigidbody.velocity = Vector2.zero;
     }
