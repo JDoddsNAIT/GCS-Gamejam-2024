@@ -12,12 +12,18 @@ public class AddPlayer : MonoBehaviour
     public int LastPlayerCount = 0;
     public int Pnum = 1;
     public GameObject[] PlayerArray;
+    private GManager GameManager = null;
 
     public void Start()
     {
         PlayerCount = 0;
         LastPlayerCount = 0;
         Pnum = 1;
+
+        GameManager = GameObject.Find("GameManager").transform.GetComponent<GManager>();
+        if (GameManager == null) { Debug.LogError("Game Manager is NULL!");  }
+
+        GameManager.PlayerJoin += OnPlayerJoin;
     }
     public void Update()
     {
@@ -45,6 +51,11 @@ public class AddPlayer : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void OnPlayerJoin()
+    {
+        PlayerCount++;
     }
 }
 
