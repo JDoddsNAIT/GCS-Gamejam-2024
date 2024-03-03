@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 63672860}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -659,7 +659,7 @@ Transform:
   m_GameObject: {fileID: 213850927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 6, z: 0}
+  m_LocalPosition: {x: 54, y: 6, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 213850932}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 234389374}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 963360640}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1008329217}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -1951,7 +1951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1035539928}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1158451845}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -2599,7 +2599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1284056249}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -2747,7 +2747,7 @@ Transform:
   m_GameObject: {fileID: 1299817754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1, z: 0}
+  m_LocalPosition: {x: 67, y: 14, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2861,7 +2861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1299817759}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -2878,7 +2878,6 @@ GameObject:
   - component: {fileID: 1926513332}
   - component: {fileID: 1926513333}
   - component: {fileID: 1926513336}
-  - component: {fileID: 1926513335}
   - component: {fileID: 1926513334}
   m_Layer: 0
   m_Name: Circle
@@ -2948,7 +2947,7 @@ Transform:
   m_GameObject: {fileID: 1926513329}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 5, z: 0}
+  m_LocalPosition: {x: 82, y: 2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3112,20 +3111,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1926513335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926513329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  clipList: []
 --- !u!114 &1926513336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,7 +3123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1926513334}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
@@ -3400,7 +3385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711cdf2d12322e74786f61f87ab5ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 2064656750}
   clipList:
   - {fileID: 8300000, guid: 1907d2290b85c9f4789c0ab3daffd317, type: 3}
   - {fileID: 8300000, guid: 4aca8a87d6bc1cb40a01060713f981cc, type: 3}
