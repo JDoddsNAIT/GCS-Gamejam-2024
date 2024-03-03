@@ -12,6 +12,8 @@ public class GManager : MonoBehaviour
     [SerializeField] private Player[] players;
     private int playerCount = 0;
 
+    public event Action PlayerJoin;
+
     
     private void Awake()
     {
@@ -27,13 +29,15 @@ public class GManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
     }
 
     public void PlayerJoined(Player newPlayer)
     {
         players[playerCount++] = newPlayer;
-
-        StartGame();
+        newPlayer.gameObject.transform.position = new Vector3(-550, 160, 0);
+        PlayerJoin();
     }
 
     public void StartGame()
@@ -51,6 +55,11 @@ public class GManager : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             Debug.Log("Level Scene Loaded!");
+            for (int i = 0; i < playerCount; i++)
+            {
+                Debug.Log("!!!");
+                players[i].gameObject.transform.position = new Vector3(0, 0, 0);
+            }
         }
     }
 

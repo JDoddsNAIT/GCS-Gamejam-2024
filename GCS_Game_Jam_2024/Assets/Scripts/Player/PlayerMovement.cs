@@ -24,22 +24,22 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        _movement.x = _playerInput.actions["Movement"].ReadValue<Vector2>().x * _moveSpeedX;
+        _movement.x = _playerInput.actions["Movement"].ReadValue<Vector2>().x;
         _jump = _playerInput.actions["Jump"].WasPressedThisFrame();
 
         if (_jump)
         {
-            _rigidbody.velocity = new Vector2(_movement.x, 10);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 10);
         }
 
-        _rigidbody.velocity = new Vector2(_movement.x, _rigidbody.velocity.y);
+        _rigidbody.velocity = new Vector2(_movement.x * _moveSpeedX, _rigidbody.velocity.y);
     }
 
     public void HitJumpPad()
     {
         Debug.Log("Jump Pad Force Applied!");
         {
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 10);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 25);
         }
     }
 }
