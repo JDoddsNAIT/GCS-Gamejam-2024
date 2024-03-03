@@ -28,9 +28,4 @@ public class SoundPlayer : MonoBehaviour
         audioSource.clip = clipList[idx];
         audioSource.Play();
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        PlaySoundIndex(1);
-    }
 }
